@@ -62,7 +62,7 @@ una batalla historica, un duelo inolvidrable, esta vez los Kiwis salen victorios
                     
             elif subaccion in ["trato", "2", "t"]:
                 print("""\nLos mangos y los kiwis llegan a un acuerdo, dividen el territorio en dos partes iguales
-y mantienen un tratado de paz, cada uno gobierna sus tierras, una era de prosperidad y armonia se desata en la galaxia.""")
+y mantienen un tratado de paz, cada uno gobierna sus tierras, una era de prosperidad y armonia se desata en la galaxia.\n""")
             else:
                 print("\nOpcion no valida en negociacion. Intenta de nuevo.\n")
             

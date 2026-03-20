@@ -25,7 +25,7 @@ los platanos traen refuerzos, las piñas defienden a los mangos, una masacre tot
 de kiwis vuelan por los aires, jugo de mango se derrama por las calles pero estos se mantienen
 firmes, una masacre total, esta vez los mangos ganan jugo de kiwi y lo beben en copas de oro en 
 modo de celebración...\n""")
-            break
+            
 
         #----ACCION 2: DEFENDER----#    
         elif accion == "defender" or accion == "2":
@@ -33,7 +33,7 @@ modo de celebración...\n""")
 las piñas traen refuerzos, defienden a los mangos, una masacre total, rebanadas 
 de kiwis vuelan por los aires, jugo de mango se derrama por las calles, una masacre total, los mangos 
 se han defendido con exito esta vez pero los kiwis se mantiene firmes...\n""")
-            break
+
 
         #----ACCION 3: NEGOCIAR----#    
         elif accion == "negociar" or accion == "3":
@@ -42,26 +42,29 @@ Dividir el territorio en dos partes iguales y mantener un tratado de paz donde c
 o terminar la guerra, un duelo a muerte\n""")
             
         #----SUB-OPCION: DUELO O TRATO----#
-            accion = input("¿Que opcion eliges? (duelo/trato): ").lower() 
-            if accion == "duelo":
+            subaccion = input("¿Que opcion eliges? (1.Duelo 2.Trato): ").lower().strip()
+            if subaccion in ["duelo", "1", "d"]:
                 ganador = rd.choice(["mangos", "kiwis"])
+                
                 if ganador == "mangos":
                     print("""\nLos mangos y los kiwis se enfrentan en un duelo a muerte, 
-el general Manzana y el general durazno lideran los ataques, una batalla épica se desata, ambos generales 
+el general Manzana y el general Durazno lideran los ataques, una batalla épica se desata, ambos generales 
 luchan con valentía, jugo de kiwi y jugo de mango por doquier, una masacre grotesca y llena de desgracia
 una batalla historica, un duelo inolvidrable, esta vez los Mangos salen victoriosos.
-\nlos kiwis han sido exterminados...\n""")
+\nLos kiwis han sido exterminados...\n""")
+                    
                 else:
                     print("""\nLos mangos y los kiwis se enfrentan en un duelo a muerte, 
 el general Durazno y el general Manzana lideran los ataques, una batalla épica se desata, ambos generales 
 luchan con valentía, jugo de mango y jugo de kiwi por doquier, una masacre grotesca y llena de desgracia
 una batalla historica, un duelo inolvidrable, esta vez los Kiwis salen victoriosos.
-\nlos Mangos han sido exterminados...\n""")
-        
-            elif accion == "trato":
+\nLos Mangos han sido exterminados...\n""")
+                    
+            elif subaccion in ["trato", "2", "t"]:
                 print("""\nLos mangos y los kiwis llegan a un acuerdo, dividen el territorio en dos partes iguales
 y mantienen un tratado de paz, cada uno gobierna sus tierras, una era de prosperidad y armonia se desata en la galaxia.""")
-                break
+            else:
+                print("\nOpcion no valida en negociacion. Intenta de nuevo.\n")
             
         #----ACCION NO VALIDA----#
         else:
